@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useGetUsersQuery } from "../features/apiSlice";
+import { useNavigate } from "react-router-dom";
 
 const UsersList = () => {
   const [page, setPage] = useState(1);
   const { data, isLoading } = useGetUsersQuery(page);
   const theData = data && data.data;
-  console.log(theData);
+  const navigate = useNavigate();
 
   return (
     <div id="users-list" className="h-auto">
@@ -22,6 +23,7 @@ const UsersList = () => {
                 <div
                   key={item.id}
                   className="flex flex-row gap-3 bg-[#686767] hover:bg-[#a4a2a2] cursor-pointer rounded-xl py-1 px-2 w-full md:w-[350px] md:flex-col md:py-5 md:justify-between"
+                  onClick={() => navigate(`/users/${item.id}`)}
                 >
                   <div className="flex items-center md:justify-center">
                     <img
@@ -42,15 +44,15 @@ const UsersList = () => {
       )}
       <div className="join flex justify-center py-10">
         <button
-          className="join-item btn"
+          className="join-item btn bg-[#40454b]"
           onClick={() => setPage((prev) => prev - 1)}
           disabled={page <= 1}
         >
           «
         </button>
-        <button className="join-item btn">Page {page}</button>
+        <button className="join-item btn bg-[#40454b]">Page {page}</button>
         <button
-          className="join-item btn"
+          className="join-item btn bg-[#40454b]"
           onClick={() => setPage((prev) => prev + 1)}
           disabled={page >= 2}
         >

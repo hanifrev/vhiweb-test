@@ -15,7 +15,6 @@ const Login = () => {
     login({ email, password })
       .unwrap()
       .then((res) => {
-        console.log(res);
         Cookies.set("access_token", res);
         navigate("/users");
       })
@@ -27,7 +26,12 @@ const Login = () => {
 
   return (
     <div id="login" className="h-screen">
-      <div className="pt-10 pb-[138px]"></div>
+      <div className="pt-2 pb-[178px] md:pb-[200px] flex justify-center brightness-0 invert w-full">
+        <img
+          className="absolute"
+          src="https://kbsproperty.co.id/wp-content/uploads/2020/09/dummy-logo-2b.png"
+        />
+      </div>
       <div className="loginForm w-[340px] sm:w-[448px]">
         {isLoading ? (
           <span className="loading loading-spinner w-20 flex mx-auto pt-48"></span>

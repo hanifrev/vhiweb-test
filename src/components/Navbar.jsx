@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div id="navbar">
-      <div className="flex flex-row  px-2 w-full justify-between max-w-[1440px] mx-auto">
+      <div className="flex flex-row  px-2 w-full justify-between max-w-[1366px] mx-auto">
         <div>
           <img
             className="logo"
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div>
           <button
             onClick={handleLogout}
-            className="bg-red-500 hover:bg-red-400 text-white p-1 rounded-md text-xs sm:p-2 sm:text-sm"
+            className="bg-red-500 hover:bg-red-400 text-white p-1 rounded-md text-xs md:p-2 md:text-sm"
           >
             LOGOUT
           </button>

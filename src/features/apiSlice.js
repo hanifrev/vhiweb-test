@@ -27,4 +27,4 @@ export const api = createApi({
   }),
 });
 
-export const { useLoginMutation } = api;
+export const { useGetUsersQuery, useGetOneUsersQuery } = api;

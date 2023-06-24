@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @import "./pages/login.scss";
+@import "./components/navbar.scss";
+@import "./components/users-list.scss";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 body {
   font-family: "Ubuntu", sans-serif;
+  background: #353434;
 }

@@ -1,0 +1,19 @@
+#navbar {
+  background: #073857;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  @screen sm {
+    height: 56px;
+  }
+
+  .logo {
+    width: 110px;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    transform: translateY(-15px);
+    @screen sm {
+      width: 140px;
+    }
+  }
+}

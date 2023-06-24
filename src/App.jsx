@@ -37,6 +37,7 @@ function App() {
           }
         />
         <Route path="*" element={<Error404 />} />
+        <Route path="404" element={<Error404 />} />
       </Routes>
     </Router>
   );

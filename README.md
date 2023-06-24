@@ -21,3 +21,7 @@ $ cd vhiweb-test
 $ npm install
 $ npm run dev
 ```
+
+### API
+
+[https://reqres.in/](https://reqres.in/)

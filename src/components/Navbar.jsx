@@ -1,14 +1,38 @@
 import React from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = (e) => {
     e.preventDefault();
-    Cookies.remove("access_token");
-    navigate("/");
+    confirmAlert({
+      customUI: ({ onClose }) => {
+        return (
+          <div className="custom-ui">
+            <h1>Logout your account?</h1>
+
+            <button onClick={logout} className="signout-btn">
+              Logout
+            </button>
+            <button onClick={onClose} className="cancels-btn">
+              Cancel
+            </button>
+          </div>
+        );
+      },
+    });
+  };
+
+  const logout = () => {
+    setTimeout(() => {
+      Cookies.remove("access_token");
+      navigate("/");
+      window.location.reload();
+    }, 200);
   };
 
   return (

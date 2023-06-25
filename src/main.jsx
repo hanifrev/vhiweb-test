@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./styles/index.scss";
 import { Provider } from "react-redux";
 import { ApiProvider } from "@reduxjs/toolkit/query/react";
-import store from "./app/store.js";
+import store from "./store.js";
 import { auth } from "./features/auth.js";
 import { api } from "./features/apiSlice.js";
 

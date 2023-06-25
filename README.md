@@ -1,6 +1,6 @@
 ## Vhiweb Frontend Test
 
-This is a simple Single Page Application (SPA) built with React, RTK Query, Redux Toolkit, Tailwind CSS, DaisyUI, and SCSS. It fetches data from an API and displays it on different pages. The pages in this project are protected, meaning you need to log in before accessing them. Once you log in using the provided credentials, you will have access to all the pages and their data.
+This is a simple Single Page Application (SPA) built with React, RTK Query, Redux Toolkit, Tailwind CSS, DaisyUI, and SCSS. It fetches data from an API and displays it on different pages. The pages (/users, /users/:id) in this project are protected, meaning you need to log in before accessing them. Once you log in using the provided credentials, you will have access to all the pages and their data.
 
 ### Live Demo
 
